@@ -1,0 +1,460 @@
+State,Year,Value
+Alabama,2010,4.4
+Alabama,2011,4.3
+Alabama,2012,3.6
+Alabama,2013,3.7
+Alabama,2014,3.8
+Alabama,2015,3.9
+Alabama,2016,3.8
+Alabama,2017,3.7
+Alabama,2018,3.7
+Alaska,2010,4.7
+Alaska,2011,4.8
+Alaska,2012,4.5
+Alaska,2013,4.5
+Alaska,2014,4
+Alaska,2015,4.1
+Alaska,2016,3.9
+Alaska,2017,3.6
+Alaska,2018,3.7
+Arizona,2010,3.5
+Arizona,2011,3.9
+Arizona,2012,4.3
+Arizona,2013,3.9
+Arizona,2014,3.9
+Arizona,2015,3.6
+Arizona,2016,3.4
+Arizona,2017,3.5
+Arizona,2018,3
+Arkansas,2010,5.7
+Arkansas,2011,5.3
+Arkansas,2012,5.3
+Arkansas,2013,5
+Arkansas,2014,4.8
+Arkansas,2015,4.8
+Arkansas,2016,3.9
+Arkansas,2017,3.7
+Arkansas,2018,4.1
+California,2010,0
+California,2011,0
+California,2012,0
+California,2013,0
+California,2014,0
+California,2015,0
+California,2016,0
+California,2017,0
+California,2018,0
+Colorado,2010,4.3
+Colorado,2011,4.4
+Colorado,2012,4.3
+Colorado,2013,4.1
+Colorado,2014,3.9
+Colorado,2015,3.7
+Colorado,2016,3.6
+Colorado,2017,3.2
+Colorado,2018,3.3
+Connecticut,2010,2.9
+Connecticut,2011,3.1
+Connecticut,2012,2.7
+Connecticut,2013,2.8
+Connecticut,2014,2.6
+Connecticut,2015,3.1
+Connecticut,2016,3.2
+Connecticut,2017,2.9
+Connecticut,2018,2.9
+Delaware,2010,3.5
+Delaware,2011,3.6
+Delaware,2012,3.5
+Delaware,2013,3.4
+Delaware,2014,3.3
+Delaware,2015,3.1
+Delaware,2016,3.1
+Delaware,2017,3
+Delaware,2018,2.8
+District of Columbia,2010,2.8
+District of Columbia,2011,2.9
+District of Columbia,2012,2.9
+District of Columbia,2013,2.8
+District of Columbia,2014,2.6
+District of Columbia,2015,2.8
+District of Columbia,2016,2.7
+District of Columbia,2017,2.5
+District of Columbia,2018,2.5
+Florida,2010,4.4
+Florida,2011,4.5
+Florida,2012,4.2
+Florida,2013,4.1
+Florida,2014,4
+Florida,2015,4
+Florida,2016,3.9
+Florida,2017,3.6
+Florida,2018,3.6
+Georgia,2010,0
+Georgia,2011,0
+Georgia,2012,0
+Georgia,2013,0
+Georgia,2014,0
+Georgia,2015,0
+Georgia,2016,0
+Georgia,2017,3.5
+Georgia,2018,2.5
+Hawaii,2010,0
+Hawaii,2011,0
+Hawaii,2012,0
+Hawaii,2013,0
+Hawaii,2014,0
+Hawaii,2015,0
+Hawaii,2016,0
+Hawaii,2017,0
+Hawaii,2018,0
+Idaho,2010,5.2
+Idaho,2011,4.9
+Idaho,2012,4.7
+Idaho,2013,4.5
+Idaho,2014,4.2
+Idaho,2015,4.1
+Idaho,2016,4
+Idaho,2017,3.9
+Idaho,2018,3.8
+Illinois,2010,2.6
+Illinois,2011,2.6
+Illinois,2012,2.4
+Illinois,2013,2.3
+Illinois,2014,2.2
+Illinois,2015,2.2
+Illinois,2016,2.2
+Illinois,2017,1.9
+Illinois,2018,1.5
+Indiana,2010,0
+Indiana,2011,0
+Indiana,2012,0
+Indiana,2013,0
+Indiana,2014,0
+Indiana,2015,0
+Indiana,2016,0
+Indiana,2017,0
+Indiana,2018,0
+Iowa,2010,2.4
+Iowa,2011,2.4
+Iowa,2012,2.2
+Iowa,2013,1.9
+Iowa,2014,1.5
+Iowa,2015,1.2
+Iowa,2016,1.3
+Iowa,2017,2
+Iowa,2018,2.2
+Kansas,2010,3.7
+Kansas,2011,3.9
+Kansas,2012,3.4
+Kansas,2013,3
+Kansas,2014,3
+Kansas,2015,2.8
+Kansas,2016,2.7
+Kansas,2017,2.4
+Kansas,2018,2.3
+Kentucky,2010,4.5
+Kentucky,2011,4.4
+Kentucky,2012,4.1
+Kentucky,2013,4.2
+Kentucky,2014,3.8
+Kentucky,2015,3.7
+Kentucky,2016,3.8
+Kentucky,2017,3.7
+Kentucky,2018,3.5
+Louisiana,2010,0
+Louisiana,2011,0
+Louisiana,2012,0
+Louisiana,2013,2.2
+Louisiana,2014,2.3
+Louisiana,2015,2.8
+Louisiana,2016,2
+Louisiana,2017,1.9
+Louisiana,2018,1.7
+Maine,2010,4.2
+Maine,2011,4.2
+Maine,2012,3.9
+Maine,2013,4
+Maine,2014,3.6
+Maine,2015,3.4
+Maine,2016,3.4
+Maine,2017,3.2
+Maine,2018,3.2
+Maryland,2010,2.8
+Maryland,2011,2.9
+Maryland,2012,2.8
+Maryland,2013,2.5
+Maryland,2014,2.5
+Maryland,2015,2.6
+Maryland,2016,2.7
+Maryland,2017,2.5
+Maryland,2018,2.4
+Massachusetts,2010,2.5
+Massachusetts,2011,2.7
+Massachusetts,2012,2.7
+Massachusetts,2013,2.6
+Massachusetts,2014,2.7
+Massachusetts,2015,2.6
+Massachusetts,2016,2.3
+Massachusetts,2017,2.2
+Massachusetts,2018,2.1
+Michigan,2010,3.5
+Michigan,2011,3.4
+Michigan,2012,3.3
+Michigan,2013,3.3
+Michigan,2014,3
+Michigan,2015,3
+Michigan,2016,2.9
+Michigan,2017,2.8
+Michigan,2018,2.8
+Minnesota,2010,0
+Minnesota,2011,0
+Minnesota,2012,0
+Minnesota,2013,0
+Minnesota,2014,0
+Minnesota,2015,0
+Minnesota,2016,0
+Minnesota,2017,0
+Minnesota,2018,0
+Mississippi,2010,4.3
+Mississippi,2011,4
+Mississippi,2012,4
+Mississippi,2013,3.6
+Mississippi,2014,3.4
+Mississippi,2015,3.4
+Mississippi,2016,3.2
+Mississippi,2017,2.9
+Mississippi,2018,2.7
+Missouri,2010,3.9
+Missouri,2011,3.9
+Missouri,2012,3.7
+Missouri,2013,3.4
+Missouri,2014,3.3
+Missouri,2015,3.2
+Missouri,2016,3.3
+Missouri,2017,3.1
+Missouri,2018,3
+Montana,2010,3.9
+Montana,2011,4
+Montana,2012,3.9
+Montana,2013,3.4
+Montana,2014,3.4
+Montana,2015,3.4
+Montana,2016,3.1
+Montana,2017,3.1
+Montana,2018,3
+Nebraska,2010,3.6
+Nebraska,2011,3.5
+Nebraska,2012,3.4
+Nebraska,2013,3.3
+Nebraska,2014,3.1
+Nebraska,2015,3.2
+Nebraska,2016,3.1
+Nebraska,2017,3
+Nebraska,2018,2.9
+Nevada,2010,5.9
+Nevada,2011,5.6
+Nevada,2012,5.5
+Nevada,2013,5.1
+Nevada,2014,5.3
+Nevada,2015,4.6
+Nevada,2016,4.3
+Nevada,2017,4.5
+Nevada,2018,4.4
+New Hampshire,2010,3.8
+New Hampshire,2011,3.8
+New Hampshire,2012,3.6
+New Hampshire,2013,3.7
+New Hampshire,2014,3.5
+New Hampshire,2015,3.3
+New Hampshire,2016,3.4
+New Hampshire,2017,3.1
+New Hampshire,2018,3.1
+New Jersey,2010,3
+New Jersey,2011,2.9
+New Jersey,2012,2.8
+New Jersey,2013,2.8
+New Jersey,2014,2.8
+New Jersey,2015,2.8
+New Jersey,2016,2.7
+New Jersey,2017,2.6
+New Jersey,2018,2.7
+New Mexico,2010,4
+New Mexico,2011,3.3
+New Mexico,2012,3
+New Mexico,2013,3.4
+New Mexico,2014,3.6
+New Mexico,2015,3.3
+New Mexico,2016,0
+New Mexico,2017,0
+New Mexico,2018,0
+New York,2010,2.9
+New York,2011,2.9
+New York,2012,2.9
+New York,2013,2.7
+New York,2014,2.8
+New York,2015,2.7
+New York,2016,2.7
+New York,2017,2.7
+New York,2018,2.8
+North Carolina,2010,3.8
+North Carolina,2011,3.7
+North Carolina,2012,3.7
+North Carolina,2013,3.4
+North Carolina,2014,3.4
+North Carolina,2015,3.1
+North Carolina,2016,3.2
+North Carolina,2017,3.1
+North Carolina,2018,3.1
+North Dakota,2010,3.1
+North Dakota,2011,2.7
+North Dakota,2012,3.1
+North Dakota,2013,2.9
+North Dakota,2014,2.8
+North Dakota,2015,2.8
+North Dakota,2016,2.6
+North Dakota,2017,2.5
+North Dakota,2018,2.6
+Ohio,2010,3.4
+Ohio,2011,3.4
+Ohio,2012,3.4
+Ohio,2013,3.3
+Ohio,2014,3.2
+Ohio,2015,3.1
+Ohio,2016,3
+Ohio,2017,2.9
+Ohio,2018,2.9
+Oklahoma,2010,5.2
+Oklahoma,2011,5.2
+Oklahoma,2012,4.8
+Oklahoma,2013,4.5
+Oklahoma,2014,4.5
+Oklahoma,2015,4.4
+Oklahoma,2016,4.4
+Oklahoma,2017,4.1
+Oklahoma,2018,3.8
+Oregon,2010,4
+Oregon,2011,3.8
+Oregon,2012,3.8
+Oregon,2013,3.6
+Oregon,2014,3.4
+Oregon,2015,3.4
+Oregon,2016,3.4
+Oregon,2017,3.4
+Oregon,2018,3.4
+Pennsylvania,2010,2.7
+Pennsylvania,2011,2.8
+Pennsylvania,2012,2.8
+Pennsylvania,2013,2.7
+Pennsylvania,2014,2.7
+Pennsylvania,2015,2.6
+Pennsylvania,2016,2.6
+Pennsylvania,2017,2.6
+Pennsylvania,2018,2.6
+Rhode Island,2010,3.2
+Rhode Island,2011,3.2
+Rhode Island,2012,3.2
+Rhode Island,2013,3.1
+Rhode Island,2014,2.8
+Rhode Island,2015,3
+Rhode Island,2016,2.8
+Rhode Island,2017,2.9
+Rhode Island,2018,2.9
+South Carolina,2010,3.1
+South Carolina,2011,3.2
+South Carolina,2012,3.2
+South Carolina,2013,3.2
+South Carolina,2014,2.9
+South Carolina,2015,2.8
+South Carolina,2016,2.5
+South Carolina,2017,2.6
+South Carolina,2018,2.5
+South Dakota,2010,3.4
+South Dakota,2011,3.3
+South Dakota,2012,3
+South Dakota,2013,2.9
+South Dakota,2014,2.8
+South Dakota,2015,2.6
+South Dakota,2016,2.8
+South Dakota,2017,2.7
+South Dakota,2018,2.6
+Tennessee,2010,4.2
+Tennessee,2011,4.3
+Tennessee,2012,4.2
+Tennessee,2013,4.1
+Tennessee,2014,3.8
+Tennessee,2015,3.7
+Tennessee,2016,3.8
+Tennessee,2017,3.5
+Tennessee,2018,3.5
+Texas,2010,3.3
+Texas,2011,3.2
+Texas,2012,3
+Texas,2013,2.9
+Texas,2014,2.7
+Texas,2015,2.6
+Texas,2016,2.6
+Texas,2017,2.2
+Texas,2018,2.6
+Utah,2010,3.7
+Utah,2011,3.7
+Utah,2012,3.3
+Utah,2013,3.1
+Utah,2014,3.1
+Utah,2015,3.6
+Utah,2016,3.6
+Utah,2017,3.4
+Utah,2018,3.8
+Vermont,2010,3.8
+Vermont,2011,3.6
+Vermont,2012,3.5
+Vermont,2013,3.5
+Vermont,2014,3.5
+Vermont,2015,3.1
+Vermont,2016,3.1
+Vermont,2017,2.9
+Vermont,2018,3.1
+Virginia,2010,3.8
+Virginia,2011,3.8
+Virginia,2012,3.7
+Virginia,2013,3.6
+Virginia,2014,3.5
+Virginia,2015,3.3
+Virginia,2016,3.4
+Virginia,2017,3
+Virginia,2018,3.1
+Washington,2010,4.2
+Washington,2011,4.1
+Washington,2012,3.9
+Washington,2013,3.8
+Washington,2014,3.6
+Washington,2015,3.4
+Washington,2016,3.5
+Washington,2017,3.4
+Washington,2018,3.3
+West Virginia,2010,5.1
+West Virginia,2011,5.2
+West Virginia,2012,4.7
+West Virginia,2013,4.6
+West Virginia,2014,4.2
+West Virginia,2015,4
+West Virginia,2016,3.8
+West Virginia,2017,3.5
+West Virginia,2018,3.3
+Wisconsin,2010,3
+Wisconsin,2011,2.9
+Wisconsin,2012,2.9
+Wisconsin,2013,2.8
+Wisconsin,2014,2.7
+Wisconsin,2015,2.6
+Wisconsin,2016,2.6
+Wisconsin,2017,2.4
+Wisconsin,2018,2.5
+Wyoming,2010,5.1
+Wyoming,2011,4.8
+Wyoming,2012,4.4
+Wyoming,2013,4.3
+Wyoming,2014,4.6
+Wyoming,2015,4.1
+Wyoming,2016,4.2
+Wyoming,2017,4
+Wyoming,2018,3.8
