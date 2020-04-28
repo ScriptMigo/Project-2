@@ -11,11 +11,13 @@ import pandas as pd
 
 from sqlalchemy import create_engine
 import pymysql
+from flask_cors import CORS
 
 db_connection_str = 'mysql+pymysql://saurin:niruas@home.unheard.org/project_2'
 db_connection = create_engine(db_connection_str)
 
 app = Flask(__name__)
+CORS(app)
 
 '''
 app.config['MYSQL_USER'] = 'saurin'
@@ -53,7 +55,7 @@ def stateDivorceRate(year):
         df = pd.read_sql(sql, con=db_connection)
     #cur.execute(sql)
     #results = cur.fetchall()
-    results = df.to_json()
+    results = df.to_json(orient="records")
     return results
 
 @app.route('/api/v1.0/unemploymentRate',methods=['GET', 'POST'],defaults={'year': None})
@@ -68,7 +70,7 @@ def unemploymentRate(year):
         df = pd.read_sql(sql, con=db_connection)
     #cur.execute(sql)
     #results = cur.fetchall()
-    results = df.to_json()
+    results = df.to_json(orient="records")
     return results
 
 @app.route('/api/v1.0/getData',methods=['GET', 'POST'],defaults={'year': None})
@@ -83,7 +85,7 @@ def data(year):
         df = pd.read_sql(sql, con=db_connection)
     #cur.execute(sql)
     #results = cur.fetchall()
-    results = df.to_json()
+    results = df.to_json(orient="records")
     return results
 
 

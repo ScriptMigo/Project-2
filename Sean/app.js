@@ -18,14 +18,14 @@ var svg = d3.select("#my_dataviz")
 
 // var url = 'http://home.unheard.org//api/v1.0/getData/2018'+selectedOption;
 
-fetch('http://home.unheard.org/api/v1.0/getData/2018')
+/*fetch('http://home.unheard.org/api/v1.0/getData')
   .then((response) => {
     return response.json();
   })
   .then((data) => {
     console.log(data);
   });
-
+*/
 
 
 d3.json('http://home.unheard.org/api/v1.0/getData', function(data) {
@@ -110,9 +110,9 @@ d3.json('http://home.unheard.org/api/v1.0/getData', function(data) {
      // .text("Unemployment Rate");
 
     //render dots
-    var dot = renderDots(data,2018);
+    var dot = renderDots(data,data[0][Year]);
     // Add labels
-    var labels = renderLabels(data,2018);
+    var labels = renderLabels(data,data[0][Year]);
     var granimInstance = new Granim({
       element: '#canvas-image-blending',
       direction: 'top-bottom',
