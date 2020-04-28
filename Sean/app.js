@@ -18,7 +18,7 @@ var svg = d3.select("#my_dataviz")
 
 // var url = 'http://home.unheard.org//api/v1.0/getData/2018'+selectedOption;
 
-fetch('http://home.unheard.org//api/v1.0/getData/2018')
+fetch('http://home.unheard.org/api/v1.0/getData/2018')
   .then((response) => {
     return response.json();
   })
@@ -28,7 +28,7 @@ fetch('http://home.unheard.org//api/v1.0/getData/2018')
 
 
 
-d3.json(unemployAPI+2018, function(data) {
+d3.json('http://home.unheard.org/api/v1.0/getData', function(data) {
 // d3.csv("JoinedData.csv", function(data) {
 
     // List of groups 
