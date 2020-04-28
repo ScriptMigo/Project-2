@@ -1,6 +1,6 @@
 var margin = {top: 5, right: 100, bottom: 30, left: 30},
     width = 1550 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+    height = 675 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -11,25 +11,16 @@ var svg = d3.select("#my_dataviz")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
+
 //Read the data
-// data call ideas?
-// d3.json(divorce)(results), funct(data);
-// d3.json(unemploy)(results), funct(data1);
 
-// var url = 'http://home.unheard.org//api/v1.0/getData/2018'+selectedOption;
+//Year state unemploy divorve unemplRANK
+var unemploymentKey = function(year){
+  return `Rate${year}`
+}
 
-/*fetch('http://home.unheard.org/api/v1.0/getData')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  });
-*/
-
-
-d3.json('http://home.unheard.org/api/v1.0/getData', function(data) {
-// d3.csv("JoinedData.csv", function(data) {
+// d3.json(unemployAPI+2018, function(data) {
+d3.csv("JoinedData.csv", function(data) {
 
     // List of groups 
     var allGroup = ["2018", "2017", "2016", "2015", "2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000"]
@@ -107,21 +98,94 @@ d3.json('http://home.unheard.org/api/v1.0/getData', function(data) {
       .range([ height, 0 ]);
     var yaxis = svg.append("g")
       .call(d3.axisLeft(y));
-     // .text("Unemployment Rate");
 
-    //render dots
-    var dot = renderDots(data,data[0][Year]);
-    // Add labels
-    var labels = renderLabels(data,data[0][Year]);
+    var unemployChart = d3.select("#Unemployment")
+      .append("svg")
+        .attr("width", 1200)
+        .attr("height",300)
+      .append("g")
+       .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")")
+
+    svg.append("g")
+      .attr("transform","translate(100,0)")
+      .attr("x", 600)
+      .attr("y", 10)
+      .style("font-size", "16px")
+      .text("Unemployment per State in Selected Year")
+    //start unemlpoyChart
+    var unemployX = d3.scaleBand()
+    .domain(data.map(d => d.abbr))
+    .rangeRound([0, 1135] )
+    .padding(0.1)
+    var unemployY = d3.scaleLinear()
+      .domain([0,15])
+      .range([200,0])
+    var unemployXaxis = unemployChart.append("g")
+      .attr("transform", "translate(0, 200)")
+      .call(d3.axisBottom(unemployX));
+    var unemployYaxis = unemployChart.append("g")
+      .call(d3.axisLeft(unemployY));
+    
+    var unempChart = function(data,year) {
+      return unemployChart.selectAll("bar")
+      .data(data)
+      .enter().append("rect")
+      .attr("class","bar")
+      .attr("x", d => unemployX(d.abbr))
+      .attr("width", 10)
+      .attr("y", d => unemployY(d[unemploymentKey(year)]))
+      .attr("height", 10)
+    }
+    //End unemployChart
+
+  var DivorChart = d3.select("#Divorce")
+    .append("svg")
+      .attr("width", 1200)
+      .attr("height",300)
+    .append("g")
+     .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")")
+  //start DivorChart
+  var DivX = d3.scaleBand()
+  .domain(data.map(d => d.abbr))
+  .rangeRound([0, 1135] )
+  .padding(0.1)
+  var DivY = d3.scaleLinear()
+    .domain([0,15])
+    .range([200,0])
+  var DivXaxis = DivorChart.append("g")
+    .attr("transform", "translate(0, 200)")
+    .call(d3.axisBottom(DivX));
+  var DivYaxis = DivorChart.append("g")
+    .call(d3.axisLeft(DivY));
+  
+  var DivoChart = function(data,year) {
+    return DivorChart.selectAll("bar")
+    .data(data)
+    .enter().append("rect")
+    .attr("class","bar")
+    .attr("x", d => DivX(d.abbr))
+    .attr("width", 10)
+    .attr("y", d => DivY(d[year]))
+    .attr("height", 10);
+
+  }
+
+//RENDERS  
+
+    var dot = renderDots(data,2018);
+    var labels = renderLabels(data,2018);
+    var renderChart = unempChart(data,2018);
+    var renderDivo = DivoChart(data,2018);
+
+    //Granim background
     var granimInstance = new Granim({
       element: '#canvas-image-blending',
       direction: 'top-bottom',
       isPausedWhenNotInView: true,
       defaultStateName: "low-unemploy",
-      // image : {
-      //     source: './floortraders.jpg',
-      //     blendingMode: 'multiply'
-      // },
+   
       states : {
         //Greens for Low
         "low-unemploy": {
@@ -159,19 +223,12 @@ d3.json('http://home.unheard.org/api/v1.0/getData', function(data) {
                     })
     // A function that update the chart
     function update(selectedOption) {
-       
-        //renderDots(data,selectedOption)
-        //renderLabels(data,selectedOption)
 
-
-//API CALL. NOT WORKING
-
-
-      // Give these new data to update line
+      // Variables to Update
 
       var adjustedX = Math.max(...data.map(x => parseFloat(x[`${selectedOption}`])))
       var adjustedY = Math.max(...data.map(x => parseFloat(x[`Rate${selectedOption}`])))
-      console.log(adjustedX)
+      console.log("Highest Divorce Rate in US " + adjustedX)
       x
         .domain([0,adjustedX+0.5])
       xaxis.transition()
@@ -189,8 +246,6 @@ d3.json('http://home.unheard.org/api/v1.0/getData', function(data) {
         .duration(1000)
           .attr("x", function(d) { return x(+d[selectedOption]) })
           .attr("y", function(d) { return y(+d[`Rate${selectedOption}`]) });
-      fetch
-
       dot
         .data(data)
         .transition()
@@ -208,11 +263,22 @@ d3.json('http://home.unheard.org/api/v1.0/getData', function(data) {
         var changedGradient = "high-unemploy";
       }
     
-
       granimInstance.changeState(changedGradient)  
-      console.log(selectedOption)
-      console.log(changedGradient)   
-      console.log(adjustedY)
+      console.log("Chosen Year is " + selectedOption)
+      console.log("Gradient Group appart of " + changedGradient)   
+      console.log("Highest Unemployment Rate in the US is" + adjustedY)
+
+      renderChart
+        .data(data)
+        .transition()
+        .duration(1000)
+          .attr("y", d => unemployY(d[unemploymentKey(selectedOption)]));
+
+      renderDivo
+        .data(data)
+        .transition()
+        .duration(1000)
+          .attr("y", d => unemployY(d[selectedOption]));
     }
 
    
