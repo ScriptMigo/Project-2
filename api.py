@@ -58,38 +58,15 @@ def stateDivorceRate(year):
     results = df.to_json(orient="records")
     return results
 
-@app.route('/api/v1.0/unemploymentRate',methods=['GET', 'POST'],defaults={'year': None})
-@app.route('/api/v1.0/unemploymentRate/<year>')
-def unemploymentRate(year):
+@app.route('/api/v1.0/getData',methods=['GET', 'POST'])
+def unemploymentRate():
     #cur = mysql.connection.cursor()
-    if(year != None):
-        sql = f"select u.*, abb.code from tblUnemployment u inner join tblStateAbbreviations abb on u.state = abb.state where u.year = {year}"
-        df = pd.read_sql(sql, con=db_connection)
-    else:
-        sql = 'select u.*, abb.code from tblUnemployment u inner join tblStateAbbreviations abb on u.state = abb.state'
-        df = pd.read_sql(sql, con=db_connection)
+    sql = f"select * from JoinedData2"
+    df = pd.read_sql(sql, con=db_connection)
     #cur.execute(sql)
     #results = cur.fetchall()
     results = df.to_json(orient="records")
     return results
-
-@app.route('/api/v1.0/getData',methods=['GET', 'POST'],defaults={'year': None})
-@app.route('/api/v1.0/getData/<year>')
-def data(year):
-    #cur = mysql.connection.cursor()
-    if(year != None):
-        sql = f"select sdr.State as State, sdr.year as Year, sdr.Value as DivorceRate, u.rate as UnemploymentRate, u.rank as UnemploymentRank, sa.code as Abbv from tblStateDivorceRate sdr inner join tblUnemployment u on sdr.State = u.state and sdr.Year = u.year inner join tblStateAbbreviations sa on sdr.State = sa.State where u.year = {year}"
-        df = pd.read_sql(sql, con=db_connection)
-    else:
-        sql = "select sdr.State as State, sdr.year as Year, sdr.Value as DivorceRate, u.rate as UnemploymentRate, u.rank as UnemploymentRank, sa.code as Abbv from tblStateDivorceRate sdr inner join tblUnemployment u on sdr.State = u.state and sdr.Year = u.year inner join tblStateAbbreviations sa on sdr.State = sa.State"
-        df = pd.read_sql(sql, con=db_connection)
-    #cur.execute(sql)
-    #results = cur.fetchall()
-    results = df.to_json(orient="records")
-    return results
-
-
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
